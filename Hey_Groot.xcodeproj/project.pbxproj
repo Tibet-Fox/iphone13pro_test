@@ -9,42 +9,52 @@
 /* Begin PBXBuildFile section */
 		413930AE2A8CF3FF003EAE29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413930AD2A8CF3FF003EAE29 /* AppDelegate.swift */; };
 		413930B02A8CF3FF003EAE29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413930AF2A8CF3FF003EAE29 /* SceneDelegate.swift */; };
-		413930B22A8CF3FF003EAE29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413930B12A8CF3FF003EAE29 /* ViewController.swift */; };
-		413930B52A8CF3FF003EAE29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413930B32A8CF3FF003EAE29 /* Main.storyboard */; };
 		413930B72A8CF400003EAE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413930B62A8CF400003EAE29 /* Assets.xcassets */; };
 		413930BA2A8CF400003EAE29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413930B82A8CF400003EAE29 /* LaunchScreen.storyboard */; };
-		41B7C6B92A92456A00FC188D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7C6B82A92456A00FC188D /* HomeViewController.swift */; };
 		41B7C6BD2A92459900FC188D /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7C6BC2A92459900FC188D /* SpeechViewController.swift */; };
-		41B7C6BF2A9245A200FC188D /* SpeechView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41B7C6BE2A9245A200FC188D /* SpeechView.storyboard */; };
-		41EF6B902A924212001460F1 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41EF6B8F2A924212001460F1 /* LoginView.storyboard */; };
 		41EF6B922A92421D001460F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF6B912A92421D001460F1 /* LoginViewController.swift */; };
-		41FC4E2B2A9247DD000A018E /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FC4E2A2A9247DD000A018E /* HomeView.storyboard */; };
 		41FC4E2E2A924AFF000A018E /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E2D2A924AFF000A018E /* TargetType.swift */; };
 		41FC4E322A924B7D000A018E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 41FC4E312A924B7D000A018E /* Moya */; };
 		41FC4E342A924D18000A018E /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E332A924D18000A018E /* Auth.swift */; };
 		41FC4E362A924D31000A018E /* PostLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E352A924D31000A018E /* PostLogin.swift */; };
 		41FC4E382A924D60000A018E /* PostNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E372A924D60000A018E /* PostNewUser.swift */; };
+		41FC4E3A2A9B1648000A018E /* PostNickName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E392A9B1648000A018E /* PostNickName.swift */; };
+		41FC4E3C2A9B1656000A018E /* SpeechReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E3B2A9B1656000A018E /* SpeechReturn.swift */; };
+		41FC4E3E2A9B168C000A018E /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E3D2A9B168C000A018E /* WeatherManager.swift */; };
+		41FC4E402A9B169F000A018E /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E3F2A9B169F000A018E /* WeatherModel.swift */; };
+		41FC4E422A9B16AE000A018E /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E412A9B16AE000A018E /* WeatherData.swift */; };
+		41FC4E462A9B9F70000A018E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E452A9B9F70000A018E /* RegisterViewController.swift */; };
+		41FC4E4A2AA04932000A018E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FC4E492AA04932000A018E /* Main.storyboard */; };
+		41FC4E4C2AA4ACBA000A018E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E4B2AA4ACBA000A018E /* TabBarViewController.swift */; };
+		41FC4E4E2AA4AD70000A018E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E4D2AA4AD70000A018E /* HomeViewController.swift */; };
+		41FC4E502AA4AD83000A018E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E4F2AA4AD83000A018E /* SearchViewController.swift */; };
+		41FC4E522AA4AD8D000A018E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E512AA4AD8D000A018E /* MyPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		413930AA2A8CF3FF003EAE29 /* Hey_Groot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hey_Groot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413930AD2A8CF3FF003EAE29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413930AF2A8CF3FF003EAE29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		413930B12A8CF3FF003EAE29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		413930B42A8CF3FF003EAE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		413930B62A8CF400003EAE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		413930B92A8CF400003EAE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		413930BB2A8CF400003EAE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41B7C6B82A92456A00FC188D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		41B7C6BC2A92459900FC188D /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
-		41B7C6BE2A9245A200FC188D /* SpeechView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SpeechView.storyboard; sourceTree = "<group>"; };
-		41EF6B8F2A924212001460F1 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
 		41EF6B912A92421D001460F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		41FC4E2A2A9247DD000A018E /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		41FC4E2D2A924AFF000A018E /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		41FC4E332A924D18000A018E /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		41FC4E352A924D31000A018E /* PostLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogin.swift; sourceTree = "<group>"; };
 		41FC4E372A924D60000A018E /* PostNewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewUser.swift; sourceTree = "<group>"; };
+		41FC4E392A9B1648000A018E /* PostNickName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNickName.swift; sourceTree = "<group>"; };
+		41FC4E3B2A9B1656000A018E /* SpeechReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechReturn.swift; sourceTree = "<group>"; };
+		41FC4E3D2A9B168C000A018E /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		41FC4E3F2A9B169F000A018E /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		41FC4E412A9B16AE000A018E /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		41FC4E452A9B9F70000A018E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		41FC4E492AA04932000A018E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		41FC4E4B2AA4ACBA000A018E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		41FC4E4D2AA4AD70000A018E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		41FC4E4F2AA4AD83000A018E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		41FC4E512AA4AD8D000A018E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +104,13 @@
 		417DB5482A92477D00C6498A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				413930B12A8CF3FF003EAE29 /* ViewController.swift */,
 				41EF6B912A92421D001460F1 /* LoginViewController.swift */,
-				41B7C6B82A92456A00FC188D /* HomeViewController.swift */,
+				41FC4E452A9B9F70000A018E /* RegisterViewController.swift */,
 				41B7C6BC2A92459900FC188D /* SpeechViewController.swift */,
+				41FC4E4B2AA4ACBA000A018E /* TabBarViewController.swift */,
+				41FC4E4D2AA4AD70000A018E /* HomeViewController.swift */,
+				41FC4E4F2AA4AD83000A018E /* SearchViewController.swift */,
+				41FC4E512AA4AD8D000A018E /* MyPageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -105,10 +118,7 @@
 		417DB5492A92478A00C6498A /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				41EF6B8F2A924212001460F1 /* LoginView.storyboard */,
-				41FC4E2A2A9247DD000A018E /* HomeView.storyboard */,
-				41B7C6BE2A9245A200FC188D /* SpeechView.storyboard */,
-				413930B32A8CF3FF003EAE29 /* Main.storyboard */,
+				41FC4E492AA04932000A018E /* Main.storyboard */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -127,6 +137,11 @@
 				41FC4E332A924D18000A018E /* Auth.swift */,
 				41FC4E352A924D31000A018E /* PostLogin.swift */,
 				41FC4E372A924D60000A018E /* PostNewUser.swift */,
+				41FC4E392A9B1648000A018E /* PostNickName.swift */,
+				41FC4E3B2A9B1656000A018E /* SpeechReturn.swift */,
+				41FC4E3D2A9B168C000A018E /* WeatherManager.swift */,
+				41FC4E3F2A9B169F000A018E /* WeatherModel.swift */,
+				41FC4E412A9B16AE000A018E /* WeatherData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,12 +210,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41FC4E2B2A9247DD000A018E /* HomeView.storyboard in Resources */,
 				413930BA2A8CF400003EAE29 /* LaunchScreen.storyboard in Resources */,
 				413930B72A8CF400003EAE29 /* Assets.xcassets in Resources */,
-				413930B52A8CF3FF003EAE29 /* Main.storyboard in Resources */,
-				41EF6B902A924212001460F1 /* LoginView.storyboard in Resources */,
-				41B7C6BF2A9245A200FC188D /* SpeechView.storyboard in Resources */,
+				41FC4E4A2AA04932000A018E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,15 +223,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41B7C6B92A92456A00FC188D /* HomeViewController.swift in Sources */,
+				41FC4E3A2A9B1648000A018E /* PostNickName.swift in Sources */,
+				41FC4E522AA4AD8D000A018E /* MyPageViewController.swift in Sources */,
+				41FC4E422A9B16AE000A018E /* WeatherData.swift in Sources */,
 				41EF6B922A92421D001460F1 /* LoginViewController.swift in Sources */,
-				413930B22A8CF3FF003EAE29 /* ViewController.swift in Sources */,
+				41FC4E502AA4AD83000A018E /* SearchViewController.swift in Sources */,
+				41FC4E3E2A9B168C000A018E /* WeatherManager.swift in Sources */,
 				413930AE2A8CF3FF003EAE29 /* AppDelegate.swift in Sources */,
 				41FC4E362A924D31000A018E /* PostLogin.swift in Sources */,
 				41B7C6BD2A92459900FC188D /* SpeechViewController.swift in Sources */,
 				413930B02A8CF3FF003EAE29 /* SceneDelegate.swift in Sources */,
 				41FC4E2E2A924AFF000A018E /* TargetType.swift in Sources */,
+				41FC4E462A9B9F70000A018E /* RegisterViewController.swift in Sources */,
+				41FC4E402A9B169F000A018E /* WeatherModel.swift in Sources */,
+				41FC4E4E2AA4AD70000A018E /* HomeViewController.swift in Sources */,
+				41FC4E3C2A9B1656000A018E /* SpeechReturn.swift in Sources */,
 				41FC4E342A924D18000A018E /* Auth.swift in Sources */,
+				41FC4E4C2AA4ACBA000A018E /* TabBarViewController.swift in Sources */,
 				41FC4E382A924D60000A018E /* PostNewUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,14 +247,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		413930B32A8CF3FF003EAE29 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				413930B42A8CF3FF003EAE29 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		413930B82A8CF400003EAE29 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

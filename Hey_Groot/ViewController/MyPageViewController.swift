@@ -8,10 +8,11 @@
 import Foundation
 import UIKit
 
-class HomeViewController: UIViewController{
+class MyPageViewController: UIViewController{
     
     override func viewDidLoad() {
         
     }
     
 }
+
