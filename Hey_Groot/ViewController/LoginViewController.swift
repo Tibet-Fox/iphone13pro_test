@@ -33,7 +33,6 @@ class LoginViewController: UIViewController {
         
         
         logoImage.frame = CGRect(x: 0, y: 0, width: 119.69, height: 53.61)
-        logoImage.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
         logoImage.translatesAutoresizingMaskIntoConstraints = false
         logoImage.widthAnchor.constraint(equalToConstant: 119.69).isActive = true
         logoImage.heightAnchor.constraint(equalToConstant: 53.61).isActive = true
@@ -82,7 +81,7 @@ class LoginViewController: UIViewController {
         
         
         registerBtn.frame = CGRect(x: 0, y: 0, width: 358, height: 57)
-        registerBtn.layer.backgroundColor = UIColor(red: 123/255, green: 193/255, blue: 178/255, alpha: 1).cgColor
+        registerBtn.layer.backgroundColor = UIColor(red: 254/255, green: 208/255, blue: 129/255, alpha: 1).cgColor
         registerBtn.layer.cornerRadius = 12
         registerBtn.translatesAutoresizingMaskIntoConstraints = false
         registerBtn.widthAnchor.constraint(equalToConstant: 358).isActive = true
@@ -113,17 +112,15 @@ class LoginViewController: UIViewController {
     }
     
     func gotoMainView(){
-//        let tabBar = UIStoryboard.init(name: "TabBarViewController", bundle: nil)
-//                guard let gotoMainVC = tabBar.instantiateViewController(withIdentifier: "TabBarViewController")as? TabBarViewController else {return}
-//
-//        gotoMainVC.modalPresentationStyle = .fullScreen
-//        self.present(gotoMainVC, animated: true, completion: nil)
-        
-        let myTabVC = UIStoryboard.init(name: "TabBarViewController", bundle: nil)
-        guard let nextVC = myTabVC.instantiateViewController(identifier: "MyTabVC") as? TabBarViewController else {
-            return
-        }
-        self.present(nextVC, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           let tabBarViewController = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+           tabBarViewController.modalPresentationStyle = .fullScreen
+           
+           // "홈" 탭을 선택
+           tabBarViewController.selectedIndex = 0 // 0은 "홈" 탭을 나타냅니다. 탭의 순서에 따라 변경할 수 있습니다.
+           
+           self.present(tabBarViewController, animated: true, completion: nil)
+    
     }
     
     
