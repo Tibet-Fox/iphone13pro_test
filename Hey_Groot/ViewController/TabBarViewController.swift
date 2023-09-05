@@ -21,21 +21,36 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-
-
-
-        let tabOne = HomeViewController()
+        
+       // let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let homeViewController = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        
+        let tabOne = homeViewController
         let tabOneBarItem = UITabBarItem(title: "홈", image: UIImage(named: "home"), tag: 0)
         tabOne.tabBarItem = tabOneBarItem
+        
+        
+        let searchViewController = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        
 
-        let tabTwo = UINavigationController(rootViewController: SearchViewController())
+        let tabTwo = searchViewController
         let tabTwoBarItem = UITabBarItem(title: "검색", image: UIImage(named: "search"), tag: 1)
         tabTwo.tabBarItem = tabTwoBarItem
 
-        let tabThree = UINavigationController(rootViewController: MyPageViewController())
+        let myPageViewController = storyboard?.instantiateViewController(withIdentifier: "MyPageViewController") as! MyPageViewController
+
+        let tabThree = myPageViewController
         let tabThreeBarItem = UITabBarItem(title: "내 정보", image: UIImage(named: "user"), tag: 2)
         tabThree.tabBarItem = tabThreeBarItem
+        
+//        let tabTwo = UINavigationController(rootViewController: SearchViewController())
+//              let tabTwoBarItem = UITabBarItem(title: "검색", image: UIImage(named: "search"), tag: 1)
+//              tabTwo.tabBarItem = tabTwoBarItem
+//
+//              let tabThree = UINavigationController(rootViewController: MyPageViewController())
+//              let tabThreeBarItem = UITabBarItem(title: "내 정보", image: UIImage(named: "user"), tag: 2)
+//              tabThree.tabBarItem = tabThreeBarItem
 
         self.viewControllers = [tabOne, tabTwo, tabThree]
     }
