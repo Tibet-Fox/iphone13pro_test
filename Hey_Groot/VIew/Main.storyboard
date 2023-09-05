@@ -131,37 +131,35 @@
             </objects>
             <point key="canvasLocation" x="145" y="-424"/>
         </scene>
-        <!--Item-->
+        <!--SerchVIewController-->
         <scene sceneID="kJO-ZT-dgk">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xYP-Pu-k1v" customClass="SearchViewController" customModule="Hey_Groot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" title="SerchVIewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xYP-Pu-k1v" customClass="SearchViewController" customModule="Hey_Groot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="48b-LE-Nc3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="PSh-VC-uHG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="4nh-1a-Mze"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1kP-MZ-7rX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2723" y="-176"/>
+            <point key="canvasLocation" x="1277" y="-192"/>
         </scene>
-        <!--Item-->
+        <!--myPageViewController-->
         <scene sceneID="CH0-PO-TG5">
             <objects>
-                <viewController storyboardIdentifier="MyPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ueX-Yl-GZ3" customClass="MyPageViewController" customModule="Hey_Groot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageViewController" title="myPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ueX-Yl-GZ3" customClass="MyPageViewController" customModule="Hey_Groot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pMV-co-3o4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BQq-K5-2oa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="P3T-mi-dKk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUI-Hv-B40" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="159"/>
+            <point key="canvasLocation" x="1277" y="466"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="1NG-rJ-qN6">
