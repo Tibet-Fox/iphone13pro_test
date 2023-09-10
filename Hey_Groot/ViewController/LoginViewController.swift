@@ -74,7 +74,7 @@ class LoginViewController: UIViewController {
         loginBtn.widthAnchor.constraint(equalToConstant: 358).isActive = true
         loginBtn.heightAnchor.constraint(equalToConstant: 57).isActive = true
         loginBtn.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 16).isActive = true
-        loginBtn.topAnchor.constraint(equalTo: parent.topAnchor, constant: 432).isActive = true
+        loginBtn.topAnchor.constraint(equalTo: parent.topAnchor, constant: 437).isActive = true
         loginBtn.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         loginBtn.setTitle("로그인하기", for: .normal)
 
@@ -111,25 +111,9 @@ class LoginViewController: UIViewController {
         
     }
     
-//    func gotoMainView(){
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let tabBarViewController = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-//           tabBarViewController.modalPresentationStyle = .fullScreen
-//        let navigationController = UINavigationController(rootViewController: HomeViewController)
-//
-//
-//           // "홈" 탭을 선택
-//           tabBarViewController.selectedIndex = 1 // 0은 "홈" 탭을 나타냅니다. 탭의 순서에 따라 변경할 수 있습니다.
-//
-//        self.present(tabBarViewController, animated: true, completion: nil)
-//
-//    }
-    
     func gotoMainView() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
-        
-        
         // 홈 뷰 컨트롤러 생성
         let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
