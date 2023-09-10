@@ -34,6 +34,22 @@ def get_most_similar_question(query):
     return list(data.keys())[most_similar_idx]
 
 def get_response(query):
+    # 고정된 센서 값
+    sensor_values = {
+        '${l}': 40000, # 조도 (나옴)
+        '${t}': 25, # 온도 (나옴)
+        '${h}': 40, # 습도 (나오면 안됨)
+        '${m}': 60 # 수분 (나오면 안됨)
+    }
+
+    # 센서 값에 따른 임계값
+    thresholds = {
+        '${l}': 45000,
+        '${t}': 30,
+        '${h}': 30,
+        '${m}': 50
+    }
+
     # 가장 유사한 질문을 가져옴
     most_similar_question = get_most_similar_question(query)
     responses = data[most_similar_question]
@@ -42,18 +58,21 @@ def get_response(query):
     response = random.choice(responses)
     response_text = list(response.values())[0]
 
-    # 응답 텍스트에서 `${h}`라는 템플릿 문자열을 찾아 사용자 입력을 기반으로 대체함.
-    if '${h}' in response_text:
-        user_input_humidity = 25 # 임시로 습도 값을 주었습니다.
+    # 센서 값의 임계값을 기준으로 응답을 수정하거나 다시 선택
+    for literal, threshold in thresholds.items():
+        if literal in response_text:
+            # 센서 값으로 템플릿 리터럴 대체
+            response_text = response_text.replace(literal, str(sensor_values[literal]))
 
-        # 습도가 30 이하라면 `${h}`를 사용자가 입력한 습도 값으로 대체
-        if user_input_humidity <= 30:
-            response_text = response_text.replace('${h}', str(user_input_humidity))
-        else:
-            # 습도 값이 30이 넘어가면, ${h} 문자열이 포함되지 않은 응답 중에서 랜덤 선택
-            responses_without_h = [resp for resp in responses if '${h}' not in list(resp.values())[0]]
-            chosen_response = random.choice(responses_without_h)
-            response_text = list(chosen_response.values())[0]
+            if sensor_values[literal] > threshold:
+                # 다른 응답을 선택
+                responses_without_literal = [resp for resp in responses if literal not in list(resp.values())[0]]
+                chosen_response = random.choice(responses_without_literal)
+                response_text = list(chosen_response.values())[0]
+                # 이전에 대체된 템플릿 리터럴 대체를 다시 반복
+                for lit, value in sensor_values.items():
+                    if lit in response_text:
+                        response_text = response_text.replace(lit, str(value))
 
     return response_text
 
