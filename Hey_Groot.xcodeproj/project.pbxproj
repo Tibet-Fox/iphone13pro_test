@@ -11,6 +11,14 @@
 		413930B02A8CF3FF003EAE29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413930AF2A8CF3FF003EAE29 /* SceneDelegate.swift */; };
 		413930B72A8CF400003EAE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413930B62A8CF400003EAE29 /* Assets.xcassets */; };
 		413930BA2A8CF400003EAE29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413930B82A8CF400003EAE29 /* LaunchScreen.storyboard */; };
+		4181B6B62AACA2FF00120FB5 /* AddCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6B52AACA2FF00120FB5 /* AddCharacterViewController.swift */; };
+		4181B6B92AACA34B00120FB5 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 4181B6B82AACA34B00120FB5 /* PanModal */; };
+		4181B6BB2AACA37800120FB5 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4181B6BA2AACA37800120FB5 /* CharacterCollectionViewCell.xib */; };
+		4181B6BD2AACA3F800120FB5 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6BC2AACA3F800120FB5 /* CharacterCollectionViewCell.swift */; };
+		4181B6C02AACA5C700120FB5 /* GlobalCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6BF2AACA5C700120FB5 /* GlobalCharacter.swift */; };
+		4181B6C42AACA73A00120FB5 /* GlobalMainCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6C32AACA73A00120FB5 /* GlobalMainCharacter.swift */; };
+		4181B6C62AAD9A4600120FB5 /* GlobalSpeechCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6C52AAD9A4600120FB5 /* GlobalSpeechCharacter.swift */; };
+		41862C1E2AA7AB5F00F98438 /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */; };
 		41B7C6BD2A92459900FC188D /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7C6BC2A92459900FC188D /* SpeechViewController.swift */; };
 		41EF6B922A92421D001460F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF6B912A92421D001460F1 /* LoginViewController.swift */; };
 		41FC4E2E2A924AFF000A018E /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E2D2A924AFF000A018E /* TargetType.swift */; };
@@ -1640,6 +1648,13 @@
 		413930B62A8CF400003EAE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		413930B92A8CF400003EAE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		413930BB2A8CF400003EAE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4181B6B52AACA2FF00120FB5 /* AddCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterViewController.swift; sourceTree = "<group>"; };
+		4181B6BA2AACA37800120FB5 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
+		4181B6BC2AACA3F800120FB5 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		4181B6BF2AACA5C700120FB5 /* GlobalCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCharacter.swift; sourceTree = "<group>"; };
+		4181B6C32AACA73A00120FB5 /* GlobalMainCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMainCharacter.swift; sourceTree = "<group>"; };
+		4181B6C52AAD9A4600120FB5 /* GlobalSpeechCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSpeechCharacter.swift; sourceTree = "<group>"; };
+		41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
 		41B7C6BC2A92459900FC188D /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		41EF6B912A92421D001460F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		41FC4E2D2A924AFF000A018E /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
@@ -3125,6 +3140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4181B6B92AACA34B00120FB5 /* PanModal in Frameworks */,
 				41FC4E322A924B7D000A018E /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5970,6 +5986,16 @@
 				9A37D4B32AAD8F44005A93C4 /* RxSwift.release.xcconfig */,
 				9A37D4B42AAD8F44005A93C4 /* RxSwift-Info.plist */,
 				9A37D4B52AAD8F44005A93C4 /* RxSwift.modulemap */,
+				4181B6BE2AACA5AD00120FB5 /* Domain */,
+				41FC4E2C2A924AE8000A018E /* APIs */,
+				41FC4E2F2A924B36000A018E /* Model */,
+				413930AD2A8CF3FF003EAE29 /* AppDelegate.swift */,
+				413930AF2A8CF3FF003EAE29 /* SceneDelegate.swift */,
+				417DB5492A92478A00C6498A /* VIew */,
+				417DB5482A92477D00C6498A /* ViewController */,
+				413930B62A8CF400003EAE29 /* Assets.xcassets */,
+				413930B82A8CF400003EAE29 /* LaunchScreen.storyboard */,
+				413930BB2A8CF400003EAE29 /* Info.plist */,
 			);
 			path = RxSwift;
 			sourceTree = "<group>";
@@ -5990,6 +6016,16 @@
 				9A37D4C12AAD8F44005A93C4 /* Pods-Hey_Groot-acknowledgements.plist */,
 				9A37D4C22AAD8F44005A93C4 /* Pods-Hey_Groot-frameworks-Release-output-files.xcfilelist */,
 				9A37D4C32AAD8F44005A93C4 /* Pods-Hey_Groot.debug.xcconfig */,
+				41EF6B912A92421D001460F1 /* LoginViewController.swift */,
+				41FC4E452A9B9F70000A018E /* RegisterViewController.swift */,
+				41B7C6BC2A92459900FC188D /* SpeechViewController.swift */,
+				41FC4E4B2AA4ACBA000A018E /* TabBarViewController.swift */,
+				41FC4E4D2AA4AD70000A018E /* HomeViewController.swift */,
+				41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */,
+				4181B6B52AACA2FF00120FB5 /* AddCharacterViewController.swift */,
+				41FC4E4F2AA4AD83000A018E /* SearchViewController.swift */,
+				4181B6BC2AACA3F800120FB5 /* CharacterCollectionViewCell.swift */,
+				41FC4E512AA4AD8D000A018E /* MyPageViewController.swift */,
 			);
 			path = "Pods-Hey_Groot";
 			sourceTree = "<group>";
@@ -6004,11 +6040,24 @@
 				9A37D4C92AAD8F44005A93C4 /* RxRelay-dummy.m */,
 				9A37D4CA2AAD8F44005A93C4 /* RxRelay.release.xcconfig */,
 				9A37D4CB2AAD8F44005A93C4 /* RxRelay-Info.plist */,
+				41FC4E492AA04932000A018E /* Main.storyboard */,
+				4181B6BA2AACA37800120FB5 /* CharacterCollectionViewCell.xib */,
 			);
 			path = RxRelay;
 			sourceTree = "<group>";
 		};
 		9A37D4CC2AAD8F44005A93C4 /* SnapKit */ = {
+		4181B6BE2AACA5AD00120FB5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4181B6BF2AACA5C700120FB5 /* GlobalCharacter.swift */,
+				4181B6C52AAD9A4600120FB5 /* GlobalSpeechCharacter.swift */,
+				4181B6C32AACA73A00120FB5 /* GlobalMainCharacter.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		41FC4E2C2A924AE8000A018E /* APIs */ = {
 			isa = PBXGroup;
 			children = (
 				9A37D4CD2AAD8F44005A93C4 /* SnapKit-Info.plist */,
@@ -6451,6 +6500,7 @@
 			name = Hey_Groot;
 			packageProductDependencies = (
 				41FC4E312A924B7D000A018E /* Moya */,
+				4181B6B82AACA34B00120FB5 /* PanModal */,
 			);
 			productName = Hey_Groot;
 			productReference = 413930AA2A8CF3FF003EAE29 /* Hey_Groot.app */;
@@ -6482,6 +6532,7 @@
 			mainGroup = 413930A12A8CF3FF003EAE29;
 			packageReferences = (
 				41FC4E302A924B7D000A018E /* XCRemoteSwiftPackageReference "Moya" */,
+				4181B6B72AACA34B00120FB5 /* XCRemoteSwiftPackageReference "PanModal" */,
 			);
 			productRefGroup = 413930AB2A8CF3FF003EAE29 /* Products */;
 			projectDirPath = "";
@@ -6861,6 +6912,7 @@
 				9A37D2D92AAD8F40005A93C4 /* SnapKit.release.xcconfig in Resources */,
 				9A37CEE22AAD8F16005A93C4 /* RxRelay.debug.xcconfig in Resources */,
 				9A37CEDF2AAD8F16005A93C4 /* Pods-Hey_Groot-acknowledgements.plist in Resources */,
+				4181B6BB2AACA37800120FB5 /* CharacterCollectionViewCell.xib in Resources */,
 				413930BA2A8CF400003EAE29 /* LaunchScreen.storyboard in Resources */,
 				9A37CDBE2AAD8F15005A93C4 /* Hey_Groot 2.xcworkspace in Resources */,
 				9A37D6272AAD8F45005A93C4 /* LICENSE.md in Resources */,
@@ -7047,6 +7099,9 @@
 				9A37D2402AAD8F3F005A93C4 /* BooleanDisposable.swift in Sources */,
 				9A37D70D2AAD8F46005A93C4 /* ConstraintDirectionalInsetTarget.swift in Sources */,
 				9A37D3582AAD8F40005A93C4 /* KFImage.swift in Sources */,
+				4181B6B62AACA2FF00120FB5 /* AddCharacterViewController.swift in Sources */,
+				41FC4E3A2A9B1648000A018E /* PostNickName.swift in Sources */,
+				4181B6C02AACA5C700120FB5 /* GlobalCharacter.swift in Sources */,
 				41FC4E522AA4AD8D000A018E /* MyPageViewController.swift in Sources */,
 				9A37D7392AAD8F46005A93C4 /* Storage.swift in Sources */,
 				9A37D1BC2AAD8F3F005A93C4 /* ControlProperty.swift in Sources */,
@@ -7241,6 +7296,8 @@
 				9A37CF432AAD8F16005A93C4 /* KingfisherManager.swift in Sources */,
 				9A37D69A2AAD8F45005A93C4 /* Binder.swift in Sources */,
 				9A37CF892AAD8F16005A93C4 /* SearchView.swift in Sources */,
+				4181B6C42AACA73A00120FB5 /* GlobalMainCharacter.swift in Sources */,
+				4181B6BD2AACA3F800120FB5 /* CharacterCollectionViewCell.swift in Sources */,
 				41FC4E3E2A9B168C000A018E /* WeatherManager.swift in Sources */,
 				9A37D62A2AAD8F45005A93C4 /* Bag.swift in Sources */,
 				9A37D68C2AAD8F45005A93C4 /* SkipUntil.swift in Sources */,
@@ -7517,6 +7574,7 @@
 				9A37D6502AAD8F45005A93C4 /* BinaryDisposable.swift in Sources */,
 				9A37D1FC2AAD8F3F005A93C4 /* RxTableViewDataSourceProxy.swift in Sources */,
 				9A37D6642AAD8F45005A93C4 /* TakeLast.swift in Sources */,
+				41862C1E2AA7AB5F00F98438 /* AddPlantViewController.swift in Sources */,
 				41B7C6BD2A92459900FC188D /* SpeechViewController.swift in Sources */,
 				9A37D2D52AAD8F40005A93C4 /* RxRelay-dummy.m in Sources */,
 				9A37CF402AAD8F16005A93C4 /* ImageDataProvider.swift in Sources */,
@@ -7907,6 +7965,7 @@
 				9A37D7402AAD8F46005A93C4 /* KingfisherError.swift in Sources */,
 				9A37D3542AAD8F40005A93C4 /* AnimatedImageView.swift in Sources */,
 				9A37CF862AAD8F16005A93C4 /* HomeViewController.swift in Sources */,
+				4181B6C62AAD9A4600120FB5 /* GlobalSpeechCharacter.swift in Sources */,
 				41FC4E342A924D18000A018E /* Auth.swift in Sources */,
 				9A37CF292AAD8F16005A93C4 /* UIRotationGestureRecognizer+RxGesture.swift in Sources */,
 				9A37D7862AAD8F47005A93C4 /* SearchDetailView.swift in Sources */,
@@ -8435,6 +8494,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4181B6B72AACA34B00120FB5 /* XCRemoteSwiftPackageReference "PanModal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/slackhq/PanModal.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		41FC4E302A924B7D000A018E /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -8446,6 +8513,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4181B6B82AACA34B00120FB5 /* PanModal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4181B6B72AACA34B00120FB5 /* XCRemoteSwiftPackageReference "PanModal" */;
+			productName = PanModal;
+		};
 		41FC4E312A924B7D000A018E /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 41FC4E302A924B7D000A018E /* XCRemoteSwiftPackageReference "Moya" */;
