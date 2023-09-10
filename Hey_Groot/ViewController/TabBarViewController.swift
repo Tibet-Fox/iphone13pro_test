@@ -44,15 +44,14 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let tabThreeBarItem = UITabBarItem(title: "내 정보", image: UIImage(named: "user"), tag: 2)
         tabThree.tabBarItem = tabThreeBarItem
         
-//        let tabTwo = UINavigationController(rootViewController: SearchViewController())
-//              let tabTwoBarItem = UITabBarItem(title: "검색", image: UIImage(named: "search"), tag: 1)
-//              tabTwo.tabBarItem = tabTwoBarItem
-//
-//              let tabThree = UINavigationController(rootViewController: MyPageViewController())
-//              let tabThreeBarItem = UITabBarItem(title: "내 정보", image: UIImage(named: "user"), tag: 2)
-//              tabThree.tabBarItem = tabThreeBarItem
+        
+        let speechViewController = storyboard?.instantiateViewController(withIdentifier: "SpeechViewController") as! SpeechViewController
 
-        self.viewControllers = [tabOne, tabTwo, tabThree]
+        let tabFour = speechViewController
+        let tabFourBarItem = UITabBarItem(title: "대화", image: UIImage(named: "voice"), tag: 2)
+        tabFour.tabBarItem = tabFourBarItem
+
+        self.viewControllers = [tabOne, tabTwo, tabFour, tabThree]
     }
 
    
