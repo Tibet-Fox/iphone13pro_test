@@ -106,7 +106,7 @@ class LoginViewController: UIViewController {
             
         }
         
-       // login(email: email, password: password)
+       login(email: email, password: password)
         self.gotoMainView()
         
     }

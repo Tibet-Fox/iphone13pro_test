@@ -15,9 +15,9 @@
 		4181B6B92AACA34B00120FB5 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 4181B6B82AACA34B00120FB5 /* PanModal */; };
 		4181B6BB2AACA37800120FB5 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4181B6BA2AACA37800120FB5 /* CharacterCollectionViewCell.xib */; };
 		4181B6BD2AACA3F800120FB5 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6BC2AACA3F800120FB5 /* CharacterCollectionViewCell.swift */; };
-		4181B6C02AACA5C700120FB5 /* GlobalCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6BF2AACA5C700120FB5 /* GlobalCharacter.swift */; };
 		4181B6C42AACA73A00120FB5 /* GlobalMainCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6C32AACA73A00120FB5 /* GlobalMainCharacter.swift */; };
 		4181B6C62AAD9A4600120FB5 /* GlobalSpeechCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6C52AAD9A4600120FB5 /* GlobalSpeechCharacter.swift */; };
+		4181B6C82AADA61300120FB5 /* GlobalCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6C72AADA61300120FB5 /* GlobalCharacter.swift */; };
 		41862C1E2AA7AB5F00F98438 /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */; };
 		41B7C6BD2A92459900FC188D /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7C6BC2A92459900FC188D /* SpeechViewController.swift */; };
 		41EF6B922A92421D001460F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF6B912A92421D001460F1 /* LoginViewController.swift */; };
@@ -49,9 +49,9 @@
 		4181B6B52AACA2FF00120FB5 /* AddCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterViewController.swift; sourceTree = "<group>"; };
 		4181B6BA2AACA37800120FB5 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		4181B6BC2AACA3F800120FB5 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
-		4181B6BF2AACA5C700120FB5 /* GlobalCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCharacter.swift; sourceTree = "<group>"; };
 		4181B6C32AACA73A00120FB5 /* GlobalMainCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMainCharacter.swift; sourceTree = "<group>"; };
 		4181B6C52AAD9A4600120FB5 /* GlobalSpeechCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSpeechCharacter.swift; sourceTree = "<group>"; };
+		4181B6C72AADA61300120FB5 /* GlobalCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCharacter.swift; sourceTree = "<group>"; };
 		41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
 		41B7C6BC2A92459900FC188D /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		41EF6B912A92421D001460F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,9 +147,9 @@
 		4181B6BE2AACA5AD00120FB5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				4181B6BF2AACA5C700120FB5 /* GlobalCharacter.swift */,
 				4181B6C52AAD9A4600120FB5 /* GlobalSpeechCharacter.swift */,
 				4181B6C32AACA73A00120FB5 /* GlobalMainCharacter.swift */,
+				4181B6C72AADA61300120FB5 /* GlobalCharacter.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -259,7 +259,6 @@
 			files = (
 				4181B6B62AACA2FF00120FB5 /* AddCharacterViewController.swift in Sources */,
 				41FC4E3A2A9B1648000A018E /* PostNickName.swift in Sources */,
-				4181B6C02AACA5C700120FB5 /* GlobalCharacter.swift in Sources */,
 				41FC4E522AA4AD8D000A018E /* MyPageViewController.swift in Sources */,
 				41FC4E422A9B16AE000A018E /* WeatherData.swift in Sources */,
 				41EF6B922A92421D001460F1 /* LoginViewController.swift in Sources */,
@@ -280,6 +279,7 @@
 				4181B6C62AAD9A4600120FB5 /* GlobalSpeechCharacter.swift in Sources */,
 				41FC4E342A924D18000A018E /* Auth.swift in Sources */,
 				41FC4E4C2AA4ACBA000A018E /* TabBarViewController.swift in Sources */,
+				4181B6C82AADA61300120FB5 /* GlobalCharacter.swift in Sources */,
 				41FC4E382A924D60000A018E /* PostNewUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
