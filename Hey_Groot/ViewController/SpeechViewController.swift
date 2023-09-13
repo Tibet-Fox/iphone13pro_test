@@ -20,6 +20,8 @@ class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioP
     @IBOutlet weak var personSpeechLabel: UILabel!
     @IBOutlet weak var characterSpeechLabel: UILabel!
     @IBOutlet weak var micButton: UIButton!
+    @IBOutlet weak var keyboardBtn: UIButton!
+    @IBOutlet weak var keyboardTextField: UITextField!
     
     //움성 녹음 관련
     var recordingSession:AVAudioSession!
@@ -54,6 +56,30 @@ class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioP
         speechParent.addSubview(personSpeechLabel)
         speechParent.addSubview(characterSpeechLabel)
         speechParent.addSubview(micButton)
+        speechParent.addSubview(keyboardTextField)
+        speechParent.addSubview(keyboardBtn)
+        
+ 
+        keyboardTextField.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        keyboardTextField.layer.cornerRadius = 20
+        keyboardTextField.translatesAutoresizingMaskIntoConstraints = false
+        keyboardTextField.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        keyboardTextField.heightAnchor.constraint(equalToConstant: 38).isActive = true
+        keyboardTextField.leadingAnchor.constraint(equalTo: speechParent.leadingAnchor, constant: 10).isActive = true
+        keyboardTextField.topAnchor.constraint(equalTo: speechParent.topAnchor, constant: 650).isActive = true
+        
+    
+        keyboardBtn.translatesAutoresizingMaskIntoConstraints = false
+        keyboardBtn.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        keyboardBtn.heightAnchor.constraint(equalToConstant: 38).isActive = true
+        keyboardBtn.leadingAnchor.constraint(equalTo: speechParent.leadingAnchor, constant: 336).isActive = true
+        keyboardBtn.topAnchor.constraint(equalTo: speechParent.topAnchor, constant: 650).isActive = true
+        keyboardBtn.setTitleColor(UIColor(red: 0.067, green: 0.067, blue: 0.067, alpha: 1), for: .normal)
+        keyboardBtn.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 5)
+        keyboardBtn.titleLabel?.textAlignment = .center
+        keyboardBtn.setTitle("보내기", for: .normal)
+
+        
         
         
         characterNameLabel.translatesAutoresizingMaskIntoConstraints = false
