@@ -174,7 +174,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPz-6c-kO9">
-                                <rect key="frame" x="171" y="700" width="50" height="35"/>
+                                <rect key="frame" x="192" y="706" width="50" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="mic.circle.fill" catalog="system" title=""/>
@@ -189,6 +189,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xjv-Cb-RPM">
+                                <rect key="frame" x="24" y="763" width="241" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4P-oL-9eJ">
+                                <rect key="frame" x="305" y="763" width="54" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확인"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v5e-cG-VkE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -197,6 +209,8 @@
                         <outlet property="characterImage" destination="40F-uB-qWa" id="LZV-BJ-G6X"/>
                         <outlet property="characterNameLabel" destination="0O9-Bd-raW" id="euK-0b-3oS"/>
                         <outlet property="characterSpeechLabel" destination="9xu-42-e9m" id="zIW-lU-8WG"/>
+                        <outlet property="keyboardBtn" destination="b4P-oL-9eJ" id="lMt-ZE-0pT"/>
+                        <outlet property="keyboardTextField" destination="Xjv-Cb-RPM" id="PNy-uo-btZ"/>
                         <outlet property="micButton" destination="HPz-6c-kO9" id="FyF-0z-3GO"/>
                         <outlet property="personSpeechLabel" destination="ogl-6y-eY2" id="Dyj-sV-J1E"/>
                     </connections>
