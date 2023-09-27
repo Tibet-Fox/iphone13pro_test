@@ -24,6 +24,8 @@ class HomeViewController: UIViewController{
 
     override func viewDidLoad() {
         
+        view.backgroundColor = UIColor(red: 0.988, green: 0.98, blue: 0.945, alpha: 1)
+        
         super.viewDidLoad()
 
         locationManager.delegate = self
@@ -60,11 +62,23 @@ class HomeViewController: UIViewController{
         tempLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 84).isActive = true
 
 
+//        characterImage.translatesAutoresizingMaskIntoConstraints = false
+//        characterImage.frame = CGRect(x: 0, y: 0, width: 200, height: 300)
+//        characterImage.image = UIImage(named: GlobalMainCharacter.shared.systemMainImageName)
+//        characterImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 10).isActive = true
+//        characterImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 15).isActive = true
+        
         characterImage.translatesAutoresizingMaskIntoConstraints = false
-        characterImage.frame = CGRect(x: 0, y: 0, width: 200, height: 300)
         characterImage.image = UIImage(named: GlobalMainCharacter.shared.systemMainImageName)
-        characterImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 10).isActive = true
+
+        // centerX와 centerY 제약 조건을 설정합니다.
+        characterImage.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         characterImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 15).isActive = true
+
+        // 이미지 뷰의 크기를 설정할 수도 있습니다. 예를 들어, 폭과 높이를 200x300으로 설정하려면 다음과 같이 추가합니다.
+        characterImage.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        characterImage.heightAnchor.constraint(equalToConstant: 300).isActive = true
+
         
 
         addPlantBtn.translatesAutoresizingMaskIntoConstraints = false
