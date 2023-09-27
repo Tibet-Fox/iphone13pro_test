@@ -19,6 +19,9 @@
 		4181B6C62AAD9A4600120FB5 /* GlobalSpeechCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6C52AAD9A4600120FB5 /* GlobalSpeechCharacter.swift */; };
 		4181B6C82AADA61300120FB5 /* GlobalCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4181B6C72AADA61300120FB5 /* GlobalCharacter.swift */; };
 		41862C1E2AA7AB5F00F98438 /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */; };
+		41A9D2DE2ABEC75000216ACC /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2DD2ABEC75000216ACC /* MyTableViewCell.swift */; };
+		41A9D2E02ABEC7A400216ACC /* YourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2DF2ABEC7A400216ACC /* YourTableViewCell.swift */; };
+		41A9D2E42ABEC9CD00216ACC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9D2E32ABEC9CD00216ACC /* SnapKit */; };
 		41B7C6BD2A92459900FC188D /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7C6BC2A92459900FC188D /* SpeechViewController.swift */; };
 		41EF6B922A92421D001460F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF6B912A92421D001460F1 /* LoginViewController.swift */; };
 		41FC4E2E2A924AFF000A018E /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E2D2A924AFF000A018E /* TargetType.swift */; };
@@ -53,6 +56,8 @@
 		4181B6C52AAD9A4600120FB5 /* GlobalSpeechCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSpeechCharacter.swift; sourceTree = "<group>"; };
 		4181B6C72AADA61300120FB5 /* GlobalCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCharacter.swift; sourceTree = "<group>"; };
 		41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
+		41A9D2DD2ABEC75000216ACC /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		41A9D2DF2ABEC7A400216ACC /* YourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTableViewCell.swift; sourceTree = "<group>"; };
 		41B7C6BC2A92459900FC188D /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		41EF6B912A92421D001460F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		41FC4E2D2A924AFF000A018E /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A9D2E42ABEC9CD00216ACC /* SnapKit in Frameworks */,
 				4181B6B92AACA34B00120FB5 /* PanModal in Frameworks */,
 				41FC4E322A924B7D000A018E /* Moya in Frameworks */,
 			);
@@ -121,9 +127,9 @@
 		417DB5482A92477D00C6498A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				41A9D2E12ABEC7F600216ACC /* ChatController */,
 				41EF6B912A92421D001460F1 /* LoginViewController.swift */,
 				41FC4E452A9B9F70000A018E /* RegisterViewController.swift */,
-				41B7C6BC2A92459900FC188D /* SpeechViewController.swift */,
 				41FC4E4B2AA4ACBA000A018E /* TabBarViewController.swift */,
 				41FC4E4D2AA4AD70000A018E /* HomeViewController.swift */,
 				41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */,
@@ -152,6 +158,16 @@
 				4181B6C72AADA61300120FB5 /* GlobalCharacter.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		41A9D2E12ABEC7F600216ACC /* ChatController */ = {
+			isa = PBXGroup;
+			children = (
+				41B7C6BC2A92459900FC188D /* SpeechViewController.swift */,
+				41A9D2DD2ABEC75000216ACC /* MyTableViewCell.swift */,
+				41A9D2DF2ABEC7A400216ACC /* YourTableViewCell.swift */,
+			);
+			path = ChatController;
 			sourceTree = "<group>";
 		};
 		41FC4E2C2A924AE8000A018E /* APIs */ = {
@@ -196,6 +212,7 @@
 			packageProductDependencies = (
 				41FC4E312A924B7D000A018E /* Moya */,
 				4181B6B82AACA34B00120FB5 /* PanModal */,
+				41A9D2E32ABEC9CD00216ACC /* SnapKit */,
 			);
 			productName = Hey_Groot;
 			productReference = 413930AA2A8CF3FF003EAE29 /* Hey_Groot.app */;
@@ -228,6 +245,7 @@
 			packageReferences = (
 				41FC4E302A924B7D000A018E /* XCRemoteSwiftPackageReference "Moya" */,
 				4181B6B72AACA34B00120FB5 /* XCRemoteSwiftPackageReference "PanModal" */,
+				41A9D2E22ABEC9CD00216ACC /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 413930AB2A8CF3FF003EAE29 /* Products */;
 			projectDirPath = "";
@@ -257,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A9D2DE2ABEC75000216ACC /* MyTableViewCell.swift in Sources */,
+				41A9D2E02ABEC7A400216ACC /* YourTableViewCell.swift in Sources */,
 				4181B6B62AACA2FF00120FB5 /* AddCharacterViewController.swift in Sources */,
 				41FC4E3A2A9B1648000A018E /* PostNickName.swift in Sources */,
 				41FC4E522AA4AD8D000A018E /* MyPageViewController.swift in Sources */,
@@ -334,6 +354,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -394,6 +415,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -500,6 +523,14 @@
 				kind = branch;
 			};
 		};
+		41A9D2E22ABEC9CD00216ACC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		41FC4E302A924B7D000A018E /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -515,6 +546,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4181B6B72AACA34B00120FB5 /* XCRemoteSwiftPackageReference "PanModal" */;
 			productName = PanModal;
+		};
+		41A9D2E32ABEC9CD00216ACC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A9D2E22ABEC9CD00216ACC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		41FC4E312A924B7D000A018E /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
