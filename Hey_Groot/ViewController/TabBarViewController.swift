@@ -50,6 +50,11 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let tabFour = speechViewController
         let tabFourBarItem = UITabBarItem(title: "대화", image: UIImage(named: "voice"), tag: 2)
         tabFour.tabBarItem = tabFourBarItem
+        
+//        let tabFive = speechViewController
+//        let tabFiveBarItem = UITabBarItem(title: "대화", image: UIImage(named: "voice"), tag: 2)
+//        tabFive.tabBarItem = tabFourBarItem
+
 
         self.viewControllers = [tabOne, tabTwo, tabFour, tabThree]
     }

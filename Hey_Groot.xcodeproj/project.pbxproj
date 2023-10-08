@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4104801F2AD26EFC00E1FD59 /* plant_info.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4104801E2AD26EFC00E1FD59 /* plant_info.csv */; };
 		413930AE2A8CF3FF003EAE29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413930AD2A8CF3FF003EAE29 /* AppDelegate.swift */; };
 		413930B02A8CF3FF003EAE29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413930AF2A8CF3FF003EAE29 /* SceneDelegate.swift */; };
 		413930B72A8CF400003EAE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413930B62A8CF400003EAE29 /* Assets.xcassets */; };
@@ -22,10 +23,30 @@
 		41A9D2DE2ABEC75000216ACC /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2DD2ABEC75000216ACC /* MyTableViewCell.swift */; };
 		41A9D2E02ABEC7A400216ACC /* YourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2DF2ABEC7A400216ACC /* YourTableViewCell.swift */; };
 		41A9D2E42ABEC9CD00216ACC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9D2E32ABEC9CD00216ACC /* SnapKit */; };
+		41A9D2E72ACD3F1600216ACC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2E62ACD3F1600216ACC /* SearchView.swift */; };
+		41A9D2E92ACD3F2600216ACC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2E82ACD3F2600216ACC /* SearchViewModel.swift */; };
+		41A9D2EB2ACD3F3800216ACC /* SarchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2EA2ACD3F3800216ACC /* SarchTableViewCell.swift */; };
+		41A9D2F02ACD3FFD00216ACC /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2EF2ACD3FFD00216ACC /* SearchDetailViewController.swift */; };
+		41A9D2F22ACD400600216ACC /* SearchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2F12ACD400600216ACC /* SearchDetailView.swift */; };
+		41A9D2F42ACD400F00216ACC /* SearchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2F32ACD400F00216ACC /* SearchDetailViewModel.swift */; };
+		41A9D2F62ACD401600216ACC /* SearchDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D2F52ACD401600216ACC /* SearchDetailTableViewCell.swift */; };
+		41A9D3032ACD453200216ACC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9D3022ACD453200216ACC /* RxBlocking */; };
+		41A9D3052ACD453200216ACC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9D3042ACD453200216ACC /* RxCocoa */; };
+		41A9D3072ACD453200216ACC /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9D3062ACD453200216ACC /* RxRelay */; };
+		41A9D3092ACD453200216ACC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9D3082ACD453200216ACC /* RxSwift */; };
+		41A9D30E2ACD456300216ACC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9D30D2ACD456300216ACC /* Kingfisher */; };
+		41A9D3112ACD46DA00216ACC /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D3102ACD46DA00216ACC /* MyPageView.swift */; };
+		41A9D3132ACD46E200216ACC /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D3122ACD46E200216ACC /* MyPageTableViewCell.swift */; };
+		41A9D3152ACD46EA00216ACC /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D3142ACD46EA00216ACC /* MyPageViewModel.swift */; };
+		41A9D3182ACE58CE00216ACC /* bookmark_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A9D3172ACE58CE00216ACC /* bookmark_on.png */; };
+		41A9D31A2ACE58D600216ACC /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A9D3192ACE58D600216ACC /* bookmark.png */; };
+		41A9D31F2ACE5BCC00216ACC /* Qutile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D31E2ACE5BCC00216ACC /* Qutile.swift */; };
+		41A9D3212ACE5C2A00216ACC /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9D3202ACE5C2A00216ACC /* ResponseModel.swift */; };
+		41A9D3272ACE770B00216ACC /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9D3262ACE770B00216ACC /* Moya */; };
+		41A9D32A2ACE771500216ACC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9D3292ACE771500216ACC /* Alamofire */; };
 		41B7C6BD2A92459900FC188D /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B7C6BC2A92459900FC188D /* SpeechViewController.swift */; };
 		41EF6B922A92421D001460F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EF6B912A92421D001460F1 /* LoginViewController.swift */; };
 		41FC4E2E2A924AFF000A018E /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E2D2A924AFF000A018E /* TargetType.swift */; };
-		41FC4E322A924B7D000A018E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 41FC4E312A924B7D000A018E /* Moya */; };
 		41FC4E342A924D18000A018E /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E332A924D18000A018E /* Auth.swift */; };
 		41FC4E362A924D31000A018E /* PostLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E352A924D31000A018E /* PostLogin.swift */; };
 		41FC4E382A924D60000A018E /* PostNewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FC4E372A924D60000A018E /* PostNewUser.swift */; };
@@ -43,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4104801E2AD26EFC00E1FD59 /* plant_info.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plant_info.csv; sourceTree = "<group>"; };
 		413930AA2A8CF3FF003EAE29 /* Hey_Groot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hey_Groot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413930AD2A8CF3FF003EAE29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413930AF2A8CF3FF003EAE29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +80,20 @@
 		41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
 		41A9D2DD2ABEC75000216ACC /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		41A9D2DF2ABEC7A400216ACC /* YourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTableViewCell.swift; sourceTree = "<group>"; };
+		41A9D2E62ACD3F1600216ACC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		41A9D2E82ACD3F2600216ACC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		41A9D2EA2ACD3F3800216ACC /* SarchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SarchTableViewCell.swift; sourceTree = "<group>"; };
+		41A9D2EF2ACD3FFD00216ACC /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		41A9D2F12ACD400600216ACC /* SearchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailView.swift; sourceTree = "<group>"; };
+		41A9D2F32ACD400F00216ACC /* SearchDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewModel.swift; sourceTree = "<group>"; };
+		41A9D2F52ACD401600216ACC /* SearchDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewCell.swift; sourceTree = "<group>"; };
+		41A9D3102ACD46DA00216ACC /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		41A9D3122ACD46E200216ACC /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
+		41A9D3142ACD46EA00216ACC /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
+		41A9D3172ACE58CE00216ACC /* bookmark_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark_on.png; sourceTree = "<group>"; };
+		41A9D3192ACE58D600216ACC /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
+		41A9D31E2ACE5BCC00216ACC /* Qutile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qutile.swift; sourceTree = "<group>"; };
+		41A9D3202ACE5C2A00216ACC /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		41B7C6BC2A92459900FC188D /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		41EF6B912A92421D001460F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		41FC4E2D2A924AFF000A018E /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
@@ -82,9 +118,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A9D3092ACD453200216ACC /* RxSwift in Frameworks */,
+				41A9D3272ACE770B00216ACC /* Moya in Frameworks */,
+				41A9D3072ACD453200216ACC /* RxRelay in Frameworks */,
 				41A9D2E42ABEC9CD00216ACC /* SnapKit in Frameworks */,
+				41A9D32A2ACE771500216ACC /* Alamofire in Frameworks */,
+				41A9D30E2ACD456300216ACC /* Kingfisher in Frameworks */,
+				41A9D3032ACD453200216ACC /* RxBlocking in Frameworks */,
+				41A9D3052ACD453200216ACC /* RxCocoa in Frameworks */,
 				4181B6B92AACA34B00120FB5 /* PanModal in Frameworks */,
-				41FC4E322A924B7D000A018E /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +152,7 @@
 		413930AC2A8CF3FF003EAE29 /* Hey_Groot */ = {
 			isa = PBXGroup;
 			children = (
+				41A9D3162ACE57BE00216ACC /* Resources */,
 				4181B6BE2AACA5AD00120FB5 /* Domain */,
 				41FC4E2C2A924AE8000A018E /* APIs */,
 				41FC4E2F2A924B36000A018E /* Model */,
@@ -127,6 +170,9 @@
 		417DB5482A92477D00C6498A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				41A9D30F2ACD46C600216ACC /* MyPage */,
+				41A9D2EE2ACD3FE000216ACC /* SearchDetail */,
+				41A9D2E52ACD3EF400216ACC /* SearchController */,
 				41A9D2E12ABEC7F600216ACC /* ChatController */,
 				41EF6B912A92421D001460F1 /* LoginViewController.swift */,
 				41FC4E452A9B9F70000A018E /* RegisterViewController.swift */,
@@ -134,9 +180,7 @@
 				41FC4E4D2AA4AD70000A018E /* HomeViewController.swift */,
 				41862C1D2AA7AB5F00F98438 /* AddPlantViewController.swift */,
 				4181B6B52AACA2FF00120FB5 /* AddCharacterViewController.swift */,
-				41FC4E4F2AA4AD83000A018E /* SearchViewController.swift */,
 				4181B6BC2AACA3F800120FB5 /* CharacterCollectionViewCell.swift */,
-				41FC4E512AA4AD8D000A018E /* MyPageViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -170,6 +214,49 @@
 			path = ChatController;
 			sourceTree = "<group>";
 		};
+		41A9D2E52ACD3EF400216ACC /* SearchController */ = {
+			isa = PBXGroup;
+			children = (
+				4104801E2AD26EFC00E1FD59 /* plant_info.csv */,
+				41FC4E4F2AA4AD83000A018E /* SearchViewController.swift */,
+				41A9D2E62ACD3F1600216ACC /* SearchView.swift */,
+				41A9D2E82ACD3F2600216ACC /* SearchViewModel.swift */,
+				41A9D2EA2ACD3F3800216ACC /* SarchTableViewCell.swift */,
+			);
+			path = SearchController;
+			sourceTree = "<group>";
+		};
+		41A9D2EE2ACD3FE000216ACC /* SearchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				41A9D2EF2ACD3FFD00216ACC /* SearchDetailViewController.swift */,
+				41A9D2F12ACD400600216ACC /* SearchDetailView.swift */,
+				41A9D2F32ACD400F00216ACC /* SearchDetailViewModel.swift */,
+				41A9D2F52ACD401600216ACC /* SearchDetailTableViewCell.swift */,
+			);
+			path = SearchDetail;
+			sourceTree = "<group>";
+		};
+		41A9D30F2ACD46C600216ACC /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				41FC4E512AA4AD8D000A018E /* MyPageViewController.swift */,
+				41A9D3102ACD46DA00216ACC /* MyPageView.swift */,
+				41A9D3122ACD46E200216ACC /* MyPageTableViewCell.swift */,
+				41A9D3142ACD46EA00216ACC /* MyPageViewModel.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		41A9D3162ACE57BE00216ACC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				41A9D3192ACE58D600216ACC /* bookmark.png */,
+				41A9D3172ACE58CE00216ACC /* bookmark_on.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		41FC4E2C2A924AE8000A018E /* APIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +276,8 @@
 				41FC4E3D2A9B168C000A018E /* WeatherManager.swift */,
 				41FC4E3F2A9B169F000A018E /* WeatherModel.swift */,
 				41FC4E412A9B16AE000A018E /* WeatherData.swift */,
+				41A9D31E2ACE5BCC00216ACC /* Qutile.swift */,
+				41A9D3202ACE5C2A00216ACC /* ResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,9 +299,15 @@
 			);
 			name = Hey_Groot;
 			packageProductDependencies = (
-				41FC4E312A924B7D000A018E /* Moya */,
 				4181B6B82AACA34B00120FB5 /* PanModal */,
 				41A9D2E32ABEC9CD00216ACC /* SnapKit */,
+				41A9D3022ACD453200216ACC /* RxBlocking */,
+				41A9D3042ACD453200216ACC /* RxCocoa */,
+				41A9D3062ACD453200216ACC /* RxRelay */,
+				41A9D3082ACD453200216ACC /* RxSwift */,
+				41A9D30D2ACD456300216ACC /* Kingfisher */,
+				41A9D3262ACE770B00216ACC /* Moya */,
+				41A9D3292ACE771500216ACC /* Alamofire */,
 			);
 			productName = Hey_Groot;
 			productReference = 413930AA2A8CF3FF003EAE29 /* Hey_Groot.app */;
@@ -243,9 +338,12 @@
 			);
 			mainGroup = 413930A12A8CF3FF003EAE29;
 			packageReferences = (
-				41FC4E302A924B7D000A018E /* XCRemoteSwiftPackageReference "Moya" */,
 				4181B6B72AACA34B00120FB5 /* XCRemoteSwiftPackageReference "PanModal" */,
 				41A9D2E22ABEC9CD00216ACC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				41A9D3012ACD453200216ACC /* XCRemoteSwiftPackageReference "RxSwift" */,
+				41A9D30C2ACD456300216ACC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				41A9D3252ACE770B00216ACC /* XCRemoteSwiftPackageReference "Moya" */,
+				41A9D3282ACE771500216ACC /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 413930AB2A8CF3FF003EAE29 /* Products */;
 			projectDirPath = "";
@@ -263,7 +361,10 @@
 			files = (
 				4181B6BB2AACA37800120FB5 /* CharacterCollectionViewCell.xib in Resources */,
 				413930BA2A8CF400003EAE29 /* LaunchScreen.storyboard in Resources */,
+				4104801F2AD26EFC00E1FD59 /* plant_info.csv in Resources */,
 				413930B72A8CF400003EAE29 /* Assets.xcassets in Resources */,
+				41A9D3182ACE58CE00216ACC /* bookmark_on.png in Resources */,
+				41A9D31A2ACE58D600216ACC /* bookmark.png in Resources */,
 				41FC4E4A2AA04932000A018E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,25 +379,37 @@
 				41A9D2DE2ABEC75000216ACC /* MyTableViewCell.swift in Sources */,
 				41A9D2E02ABEC7A400216ACC /* YourTableViewCell.swift in Sources */,
 				4181B6B62AACA2FF00120FB5 /* AddCharacterViewController.swift in Sources */,
+				41A9D31F2ACE5BCC00216ACC /* Qutile.swift in Sources */,
 				41FC4E3A2A9B1648000A018E /* PostNickName.swift in Sources */,
 				41FC4E522AA4AD8D000A018E /* MyPageViewController.swift in Sources */,
 				41FC4E422A9B16AE000A018E /* WeatherData.swift in Sources */,
 				41EF6B922A92421D001460F1 /* LoginViewController.swift in Sources */,
 				41FC4E502AA4AD83000A018E /* SearchViewController.swift in Sources */,
 				4181B6C42AACA73A00120FB5 /* GlobalMainCharacter.swift in Sources */,
+				41A9D3112ACD46DA00216ACC /* MyPageView.swift in Sources */,
 				4181B6BD2AACA3F800120FB5 /* CharacterCollectionViewCell.swift in Sources */,
+				41A9D3152ACD46EA00216ACC /* MyPageViewModel.swift in Sources */,
 				41FC4E3E2A9B168C000A018E /* WeatherManager.swift in Sources */,
+				41A9D2F42ACD400F00216ACC /* SearchDetailViewModel.swift in Sources */,
 				413930AE2A8CF3FF003EAE29 /* AppDelegate.swift in Sources */,
 				41FC4E362A924D31000A018E /* PostLogin.swift in Sources */,
 				41862C1E2AA7AB5F00F98438 /* AddPlantViewController.swift in Sources */,
+				41A9D3212ACE5C2A00216ACC /* ResponseModel.swift in Sources */,
+				41A9D2EB2ACD3F3800216ACC /* SarchTableViewCell.swift in Sources */,
 				41B7C6BD2A92459900FC188D /* SpeechViewController.swift in Sources */,
+				41A9D2F02ACD3FFD00216ACC /* SearchDetailViewController.swift in Sources */,
+				41A9D2F22ACD400600216ACC /* SearchDetailView.swift in Sources */,
 				413930B02A8CF3FF003EAE29 /* SceneDelegate.swift in Sources */,
+				41A9D3132ACD46E200216ACC /* MyPageTableViewCell.swift in Sources */,
 				41FC4E2E2A924AFF000A018E /* TargetType.swift in Sources */,
 				41FC4E462A9B9F70000A018E /* RegisterViewController.swift in Sources */,
 				41FC4E402A9B169F000A018E /* WeatherModel.swift in Sources */,
+				41A9D2E72ACD3F1600216ACC /* SearchView.swift in Sources */,
 				41FC4E4E2AA4AD70000A018E /* HomeViewController.swift in Sources */,
 				41FC4E3C2A9B1656000A018E /* SpeechReturn.swift in Sources */,
+				41A9D2E92ACD3F2600216ACC /* SearchViewModel.swift in Sources */,
 				4181B6C62AAD9A4600120FB5 /* GlobalSpeechCharacter.swift in Sources */,
+				41A9D2F62ACD401600216ACC /* SearchDetailTableViewCell.swift in Sources */,
 				41FC4E342A924D18000A018E /* Auth.swift in Sources */,
 				41FC4E4C2AA4ACBA000A018E /* TabBarViewController.swift in Sources */,
 				4181B6C82AADA61300120FB5 /* GlobalCharacter.swift in Sources */,
@@ -531,12 +644,36 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		41FC4E302A924B7D000A018E /* XCRemoteSwiftPackageReference "Moya" */ = {
+		41A9D3012ACD453200216ACC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		41A9D30C2ACD456300216ACC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		41A9D3252ACE770B00216ACC /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		41A9D3282ACE771500216ACC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -552,10 +689,40 @@
 			package = 41A9D2E22ABEC9CD00216ACC /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		41FC4E312A924B7D000A018E /* Moya */ = {
+		41A9D3022ACD453200216ACC /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 41FC4E302A924B7D000A018E /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 41A9D3012ACD453200216ACC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		41A9D3042ACD453200216ACC /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A9D3012ACD453200216ACC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		41A9D3062ACD453200216ACC /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A9D3012ACD453200216ACC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		41A9D3082ACD453200216ACC /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A9D3012ACD453200216ACC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		41A9D30D2ACD456300216ACC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A9D30C2ACD456300216ACC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		41A9D3262ACE770B00216ACC /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A9D3252ACE770B00216ACC /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		41A9D3292ACE771500216ACC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A9D3282ACE771500216ACC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

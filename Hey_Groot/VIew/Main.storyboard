@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="-206" y="-424"/>
         </scene>
-        <!--SerchVIewController-->
+        <!--SearchViewController-->
         <scene sceneID="kJO-ZT-dgk">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" title="SerchVIewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xYP-Pu-k1v" customClass="SearchViewController" customModule="Hey_Groot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" title="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xYP-Pu-k1v" customClass="SearchViewController" customModule="Hey_Groot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="48b-LE-Nc3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
