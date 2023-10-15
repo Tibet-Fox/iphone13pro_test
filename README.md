@@ -7,3 +7,5 @@
 - Xcode version 14.0
 - Framework: Django version 3.2
 - DBMS: SQLite
+
+회의록 : https://steadfast-binder-930.notion.site/HEY-GROOT-5ccf8552cda7489cb89930e648996395?pvs=4
