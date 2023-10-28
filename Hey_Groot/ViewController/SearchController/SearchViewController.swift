@@ -42,6 +42,7 @@ class SearchViewController: UIViewController{
                         if $0[2].contains((string.element ?? "") ?? ""){
                             arr.append($0)
                         }
+                        
                     }
                     viewModel.getItems.accept(arr)
                 }
