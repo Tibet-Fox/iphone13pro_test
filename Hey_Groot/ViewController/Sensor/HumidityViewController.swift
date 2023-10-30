@@ -18,8 +18,8 @@ class HumidityViewController: UIViewController {
         // 네비게이션 바 타이틀 설정
         self.title = "Humidity"
         
-        // 네비게이션 바의 왼쪽에 "Back" 버튼 추가 (이전 화면으로 돌아가기)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
+        // 네비게이션 바의 왼쪽에 "화살표" 버튼 추가 (이전 화면으로 돌아가기)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
     }
     
     @objc func backButtonTapped() {
