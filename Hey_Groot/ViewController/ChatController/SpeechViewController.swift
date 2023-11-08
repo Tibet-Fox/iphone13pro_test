@@ -12,7 +12,7 @@ import AVFoundation
 import Moya
 import SnapKit
 
-class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate{
+class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate, UITextFieldDelegate{
     
     private let provider = MoyaProvider<Types>()
     
@@ -54,10 +54,12 @@ class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioP
             }
         }
 
-        
+        setupKeyboardEvent()
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:))))
         initStyle()
         
         chatTextView.delegate = self
+       
        
         micButton.addTarget(self, action: #selector(pressMicroBtn), for: .touchUpInside)
         sendBtn.addTarget(self, action: #selector(addChatData), for: .touchUpInside)
@@ -83,14 +85,45 @@ class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioP
         }
         
     }
+    @objc func handleTap(sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            view.endEditing(true) // todo...
+        }
+        sender.cancelsTouchesInView = false
+    }
+    
+    func setupKeyboardEvent() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ sender: Notification) {
+        view.frame.origin.y -= 250
+    }
+
+    @objc func keyboardWillHide(_ sender: Notification) {
+            view.frame.origin.y = 0
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+
     
     private func initStyle() {
         chatTextView.layer.cornerRadius = 20.0
         chatTextView.isScrollEnabled = true
         chatTextView.textContainerInset = UIEdgeInsets(top: 15, left: 10, bottom: 10, right: 10) // 여백 설정
         chatTextView.layer.borderWidth = 1
+        
         chatTextView.layer.borderColor = UIColor(red: 0.6, green: 0.808, blue: 0.506, alpha: 1).cgColor
-
+    
         micButton.translatesAutoresizingMaskIntoConstraints = false
         micButton.setImage(UIImage(systemName: "mic.circle.fill"), for: .normal)
         micButton.tintColor = UIColor(red: 0.6, green: 0.808, blue: 0.506, alpha: 1)
@@ -105,6 +138,7 @@ class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioP
         
         
         placeholderLabel.text = "채팅을 입력하세요."
+
         placeholderLabel.textColor = UIColor.lightGray
         placeholderLabel.font = UIFont.systemFont(ofSize: 13)
         view.addSubview(placeholderLabel)
@@ -116,6 +150,8 @@ class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioP
 
         
     }
+    
+   
     
     @objc func addSpeechData() {
         if let text=text, !text.isEmpty{
@@ -308,7 +344,7 @@ class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioP
         }
         
         // speechRecognizer 인스턴스 생성
-        if let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR")) {
+        if let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ko-KR")) {
             if speechRecognizer.isAvailable {
                 let request = SFSpeechURLRecognitionRequest(url: audioUrl)
                 speechRecognizer.supportsOnDeviceRecognition = true
@@ -359,6 +395,7 @@ class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioP
                         self?.speech = result
                         if let message = self?.speech {
                             let utterance = AVSpeechUtterance(string: message)
+
                             utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
                             utterance.rate = 0.5
                             utterance.pitchMultiplier = 0.9
@@ -376,7 +413,6 @@ class SpeechViewController : UIViewController, AVAudioRecorderDelegate, AVAudioP
     }
         //함수 끝
 }
-
 
 extension SpeechViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {

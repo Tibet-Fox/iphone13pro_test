@@ -23,6 +23,9 @@ class RegisterViewController: UIViewController {
         
         let registerParent = self.view!
         
+       // setupKeyboardEvent()
+       // view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:))))
+        
         registerParent.addSubview(emailTextField)
         registerParent.addSubview(passwordTextField)
         registerParent.addSubview(checkPasswordTextField)
@@ -83,6 +86,17 @@ class RegisterViewController: UIViewController {
         registerBtn.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         registerBtn.setTitle("완료하기", for: .normal)
     }
+//    @objc func handleTap(sender: UITapGestureRecognizer) {
+//        if sender.state == .ended {
+//            view.endEditing(true) // todo...
+//        }
+//        sender.cancelsTouchesInView = false
+//    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+            self.view.endEditing(true)
+      }
+   
     
     
     @IBAction func pressTegisterBtn(_ sender: UIButton) {
