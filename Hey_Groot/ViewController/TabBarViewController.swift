@@ -53,7 +53,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let sensorViewController = storyboard?.instantiateViewController(withIdentifier: "SensorViewController") as! SensorViewController
 
         let tabFive = sensorViewController
-        let tabFiveBarItem = UITabBarItem(title: "센서", image: UIImage(named: "sensor"), tag: 4)
+        let tabFiveBarItem = UITabBarItem(title: "센서", image: UIImage(systemName: "dot.radiowaves.left.and.right"), tag: 4)
+
         tabFive.tabBarItem = tabFiveBarItem
 
         //탭 바에 뷰 컨트롤러 설정
