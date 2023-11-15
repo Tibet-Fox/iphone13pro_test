@@ -31,13 +31,7 @@ class MyPlantViewController: UIViewController {
         let combinedItems = [backButton, mypageItem]
         self.navigationItem.leftBarButtonItems = combinedItems
         
-        // 버전 정보를 표시할 레이블 생성
-        let versionLabel = UILabel(frame: CGRect(x: 20, y: 100, width: view.frame.width - 40, height: 30))
-        versionLabel.text = "Version: 15.0"
-        versionLabel.textAlignment = .center
-        versionLabel.textColor = .black
-        // 뷰에 레이블 추가
-        view.addSubview(versionLabel)
+        
     }
 
     
