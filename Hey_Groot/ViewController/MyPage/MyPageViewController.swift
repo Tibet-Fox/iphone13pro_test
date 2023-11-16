@@ -32,6 +32,7 @@ class MyPageViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         
         
+        
         // 테이블 뷰 초기화 및 설정
         tableView = UITableView(frame: view.bounds, style: .insetGrouped)
         tableView.dataSource = self
@@ -79,8 +80,13 @@ class MyPageViewController: UIViewController, UITableViewDataSource, UITableView
 
            if indexPath.section == 0 {
                // 섹션 1
-               cell.textLabel?.text = section1Data[indexPath.row]
-               cell.accessoryType = .disclosureIndicator // 오른쪽에 화살표 아이콘 삽입
+               if let text = section1Data.first {
+                    let attributedString = NSMutableAttributedString(string: text)
+                           attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 16), range: NSRange(location: 0, length: text.count))
+                           cell.textLabel?.attributedText = attributedString
+                       }
+
+                       cell.accessoryType = .disclosureIndicator // 오른쪽에 화살표 아이콘 삽입
 
                if indexPath.row == 0 {
                    // "이미지와 레이블" 셀의 이미지 설정

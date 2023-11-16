@@ -13,6 +13,8 @@ class TemperatureViewController: UIViewController {
     
     // 레이블을 생성
     let plantDataLabel = UILabel()
+    // "센서값" 레이블 생성
+       let sensorLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,48 +37,69 @@ class TemperatureViewController: UIViewController {
         let combinedItems = [backButton, sensorItem]
         self.navigationItem.leftBarButtonItems = combinedItems
         
-        // 아두이노 식물 데이터 레이블에 표시
-        fetchArduinoPlantData()
+        
+      
+        // "센서값" 레이블 추가
+               view.addSubview(sensorLabel)
+               sensorLabel.translatesAutoresizingMaskIntoConstraints = false
+               NSLayoutConstraint.activate([
+                   sensorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                   sensorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+               ])
+        
+        fetchDataFromServer()
+        
     }
     
-    func fetchArduinoPlantData() {
+    func fetchDataFromServer() {
+        
+        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAwMTM3MTUwLCJpYXQiOjE3MDAxMTkxNTAsImp0aSI6ImY5MDBjNzg3MTE2YjQ4NTk5ZDhjZjc0OGI3ZjVjY2ViIiwidXNlcl9pZCI6Mn0.qmkM3o53RDPohhjs362f0mGaGW5T4HVBCOcT0sSJsNo"
+        
+//        let refreshToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwMDcyMzk1MCwiaWF0IjoxNzAwMTE5MTUwLCJqdGkiOiI1MDE1Yzk0NTQ5N2I0MDIwYjZmZGI5MGIyMmVhMzZkZiIsInVzZXJfaWQiOjJ9.YjZlcZCr-e_srnkkH2-6gBexLKa8ZhVPZdlKZoVmUPE"
+        // 연결할 URL
         if let url = URL(string: "http://3.20.48.164:8000/plant/data/") {
-            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    print("네트워크 요청 오류: \(error)")
-                    return
-                }
-                
-                if let data = data {
-                    do {
-                        // JSON 데이터를 파싱
-                        let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
-                        if let jsonDictionary = jsonData as? [String: Any] {
-                            // 필요한 데이터 추출
-                            if let plantData = jsonDictionary["plantData"] as? String {
-                                // 레이블에 데이터 표시
-                                DispatchQueue.main.async {
-                                    self.updatePlantDataLabel(plantData)
-                                }
-                            }
-                        }
-                    } catch {
-                        print("데이터 파싱 오류: \(error)")
-                    }
-                }
-            }
-            task.resume()
-        } else {
-            print("잘못된 URL입니다.")
-        }
-    }
-    
-    // 레이블에 데이터를 업데이트하는 함수
-    func updatePlantDataLabel(_ data: String) {
-        plantDataLabel.text = data
-        plantDataLabel.frame = CGRect(x: 20, y: 100, width: 300, height: 30)
-        view.addSubview(plantDataLabel)
-    }
+            
+            // URLSession 객체 생성
+            let session = URLSession.shared
+            
+            // URL 요청을 위한 URLRequest 생성
+                   var request = URLRequest(url: url)
+                   
+                   // 액세스 토큰을 사용하여 Authorization 헤더 추가
+                   request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+
+                   // URLSession 데이터 작업 생성
+                   let task = session.dataTask(with: request) { (data, response, error) in
+                       // 에러 확인
+                       if let error = error {
+                           print("에러: \(error)")
+                           return
+                       }
+
+                       // 데이터 확인
+                       if let data = data {
+                           // 데이터를 필요에 따라 파싱
+                           if let resultString = String(data: data, encoding: .utf8) {
+                               print("서버 응답: \(response)")
+                               print("서버에서 받은 데이터: \(resultString)")
+
+                               // 필요에 따라 메인 스레드에서 UI 업데이트 수행
+                               DispatchQueue.main.async {
+                                   
+                                   // UI 업데이트 또는 서버에서 받은 데이터 처리
+                                   // 예를 들어, plantDataLabel을 받은 데이터로 업데이트할 수 있습니다.
+                                   self.sensorLabel.text = resultString
+                                   self.plantDataLabel.text = resultString
+                               }
+                           }
+                       }
+                   }
+
+                   // 요청을 시작하기 위해 작업을 재개
+                   task.resume()
+               }
+           }
+
     
     @objc func backButtonTapped() {
         // 화살표 버튼이 탭되었을 때 수행할 동작을 여기에 추가
