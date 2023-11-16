@@ -62,7 +62,7 @@ class TemperatureViewController: UIViewController {
         NSLayoutConstraint.activate([
             sensorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             sensorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            sensorLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8) // 예시로 너비를 화면 너비의 80%로 설정
+//            sensorLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8) // 예시로 너비를 화면 너비의 80%로 설정
         ])
 
         
@@ -80,13 +80,24 @@ class TemperatureViewController: UIViewController {
                if let latestData = jsonDataObject.datas.last {
                    DispatchQueue.main.async {
                        // Update UI elements with the latest data
-                       self.sensorLabel.text = """
-                       Latest Temperature:\(latestData.temp)°C
-                       Humidity:\(latestData.humid)%"
-                       Light:\(latestData.light)
-                       Soil:\(latestData.soil)
-                    """
-                       // Update other UI elements as needed
+                          let boldAttributes: [NSAttributedString.Key: Any] = [
+                              .font: UIFont.boldSystemFont(ofSize: 16) // 여기서 16은 굵은체 텍스트의 크기
+                          ]
+                          
+                          let attributedText = NSMutableAttributedString(string: "Temperature: ", attributes: boldAttributes)
+                          
+                          // Append the non-bold part of the text
+                          attributedText.append(NSAttributedString(string: "\(latestData.temp) °C"))
+                          
+                          self.sensorLabel.attributedText = attributedText
+                          self.view.addSubview(self.sensorLabel)
+                          self.sensorLabel.translatesAutoresizingMaskIntoConstraints = false
+                          
+                          // Add Auto Layout constraints to center the label in the view
+                          NSLayoutConstraint.activate([
+                              self.sensorLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                              self.sensorLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+                          ])
                    }
                }
            } catch {
