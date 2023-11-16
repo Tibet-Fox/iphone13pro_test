@@ -9,6 +9,20 @@
 import Foundation
 import UIKit
 
+//struct YourDataModel: Codable {
+////    let partner: Partner
+//       let datas: [SensorData]
+//
+//    struct SensorData: Codable {
+//        let partner_id: Int
+//        let date: String
+//        let light: Double
+//        let humid: Double
+//        let temp: Double
+//        let soil: Int
+//    }
+//}
+
 class TemperatureViewController: UIViewController {
     
     // 레이블을 생성
@@ -18,6 +32,7 @@ class TemperatureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // 배경색을 흰색으로 설정하고 투명도를 조절
         view.backgroundColor = UIColor.white.withAlphaComponent(1.0)
@@ -40,22 +55,52 @@ class TemperatureViewController: UIViewController {
         
       
         // "센서값" 레이블 추가
-               view.addSubview(sensorLabel)
-               sensorLabel.translatesAutoresizingMaskIntoConstraints = false
-               NSLayoutConstraint.activate([
-                   sensorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                   sensorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-               ])
+        view.addSubview(sensorLabel)
+        sensorLabel.numberOfLines = 0 // 여러 줄의 텍스트 허용
+        sensorLabel.lineBreakMode = .byWordWrapping // 단어 단위로 줄 바꿈
+        sensorLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            sensorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            sensorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            sensorLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8) // 예시로 너비를 화면 너비의 80%로 설정
+        ])
+
         
         fetchDataFromServer()
         
     }
     
+    // Function to parse JSON data and update UI
+       func updateUI(with jsonData: Data) {
+           do {
+               let decoder = JSONDecoder()
+               let jsonDataObject = try decoder.decode(YourDataModel.self, from: jsonData)
+
+               // Assuming YourDataModel is a struct or class representing your JSON structure
+               if let latestData = jsonDataObject.datas.last {
+                   DispatchQueue.main.async {
+                       // Update UI elements with the latest data
+                       self.sensorLabel.text = """
+                       Latest Temperature:\(latestData.temp)°C
+                       Humidity:\(latestData.humid)%"
+                       Light:\(latestData.light)
+                       Soil:\(latestData.soil)
+                    """
+                       // Update other UI elements as needed
+                   }
+               }
+           } catch {
+               print("Error decoding JSON: \(error)")
+           }
+       }
+    
+    
+    
     func fetchDataFromServer() {
         
-        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAwMTM3MTUwLCJpYXQiOjE3MDAxMTkxNTAsImp0aSI6ImY5MDBjNzg3MTE2YjQ4NTk5ZDhjZjc0OGI3ZjVjY2ViIiwidXNlcl9pZCI6Mn0.qmkM3o53RDPohhjs362f0mGaGW5T4HVBCOcT0sSJsNo"
+        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAwMTYxNzE2LCJpYXQiOjE3MDAxNDM3MTYsImp0aSI6Ijg2OWQ4MzI3ODk1YzRjODRiMjVhNTE0MDEzMzk2NTY1IiwidXNlcl9pZCI6Mn0.8vHrGeLC_1tPRj-j25_KFzrvqBpBeN2SxjGFnLR3HZw"
         
-//        let refreshToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwMDcyMzk1MCwiaWF0IjoxNzAwMTE5MTUwLCJqdGkiOiI1MDE1Yzk0NTQ5N2I0MDIwYjZmZGI5MGIyMmVhMzZkZiIsInVzZXJfaWQiOjJ9.YjZlcZCr-e_srnkkH2-6gBexLKa8ZhVPZdlKZoVmUPE"
+
         // 연결할 URL
         if let url = URL(string: "http://3.20.48.164:8000/plant/data/") {
             
@@ -76,30 +121,17 @@ class TemperatureViewController: UIViewController {
                            return
                        }
 
-                       // 데이터 확인
                        if let data = data {
-                           // 데이터를 필요에 따라 파싱
-                           if let resultString = String(data: data, encoding: .utf8) {
-                               print("서버 응답: \(response)")
-                               print("서버에서 받은 데이터: \(resultString)")
+                                           // Call the updateUI function with the received JSON data
+                                           self.updateUI(with: data)
+                                       }
+                                   }
 
-                               // 필요에 따라 메인 스레드에서 UI 업데이트 수행
-                               DispatchQueue.main.async {
-                                   
-                                   // UI 업데이트 또는 서버에서 받은 데이터 처리
-                                   // 예를 들어, plantDataLabel을 받은 데이터로 업데이트할 수 있습니다.
-                                   self.sensorLabel.text = resultString
-                                   self.plantDataLabel.text = resultString
+                                   task.resume()
                                }
                            }
-                       }
-                   }
-
-                   // 요청을 시작하기 위해 작업을 재개
-                   task.resume()
-               }
-           }
-
+                           
+    
     
     @objc func backButtonTapped() {
         // 화살표 버튼이 탭되었을 때 수행할 동작을 여기에 추가

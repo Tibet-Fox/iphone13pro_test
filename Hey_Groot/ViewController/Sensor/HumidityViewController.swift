@@ -7,10 +7,16 @@
 import Foundation
 import UIKit
 
+
+
 class HumidityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 레이블을 생성
+        let plantDataLabel = UILabel()
+        // "센서값" 레이블 생성
+           let sensorLabel = UILabel()
         
         // 배경색을 흰색으로 설정하고 투명도를 조절
         view.backgroundColor = UIColor.white.withAlphaComponent(1) // 투명도를 1로 설정
